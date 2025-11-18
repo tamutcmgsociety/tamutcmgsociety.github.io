@@ -1,1 +1,263 @@
-# tamutcmgsociety.github.io
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Management Society</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #E2E8F0;
+            background-image: 
+                radial-gradient(at 10% 10%, hsla(217, 91%, 60%, 0.15) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, hsla(262, 83%, 72%, 0.15) 0px, transparent 50%);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #a78bfa;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            background: rgba(25, 25, 25, 0.7);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation --><header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+             <div class="flex items-center justify-between glass-card rounded-xl px-6 py-3">
+                <a href="#home" class="flex items-center space-x-2">
+                    <img src="https://raw.githubusercontent.com/aidamalik/Technology-Management-Society/main/images/TMS_Logo_2.jpg" alt="TMS Logo" class="h-8">
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-slate-300 hover:text-white active">Home</a>
+                    <a href="#events" class="nav-link text-slate-300 hover:text-white">Events</a>
+                    <a href="#team" class="nav-link text-slate-300 hover:text-white">Our Team</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-white">Contact Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu --><div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2 glass-card mx-6 rounded-lg">
+            <a href="#home" class="block nav-link text-slate-300 hover:text-white active px-4 py-2">Home</a>
+            <a href="#events" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Events</a>
+            <a href="#team" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Our Team</a>
+            <a href="#contact" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section --><section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6 leading-tight">
+                    Technology Management Society
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                    Bridging the gap between technology and business. We empower future leaders with the skills and network to thrive in the tech industry.
+                </p>
+                <a href="#events" class="bg-white/10 text-white font-medium px-8 py-3 rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
+                    Explore Our Events
+                </a>
+            </div>
+        </section>
+
+        <!-- Events Section --><section id="events" class="py-24 md:py-40 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight">Upcoming <span class="gradient-text">Events</span></h2>
+                    <p class="text-lg text-slate-400 mt-4 font-light">Join us for workshops, speaker series, and networking nights.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-12 border-l-2 border-slate-900 pl-8 md:pl-12">
+                    <!-- Event 1 --><div class="relative">
+                        <div class="absolute -left-[3.2rem] md:-left-[4.2rem] top-1 h-5 w-5 rounded-full bg-blue-500 ring-8 ring-black"></div>
+                        <p class="text-blue-400 font-medium mb-2 text-sm">Date</p>
+                        <h3 class="text-2xl font-medium mb-3">Event Title</h3>
+                        <p class="text-slate-400 font-light">Event Description</p>
+                    </div>
+                     <!-- Event 2 --><div class="relative">
+                        <div class="absolute -left-[3.2rem] md:-left-[4.2rem] top-1 h-5 w-5 rounded-full bg-blue-500 ring-8 ring-black"></div>
+                        <p class="text-blue-400 font-medium mb-2 text-sm">Date</p>
+                        <h3 class="text-2xl font-medium mb-3">Event Title</h3>
+                        <p class="text-slate-400 font-light">Event Description</p>
+                    </div>
+                     <!-- Event 3 --><div class="relative">
+                        <div class="absolute -left-[3.2rem] md:-left-[4.2rem] top-1 h-5 w-5 rounded-full bg-blue-500 ring-8 ring-black"></div>
+                        <p class="text-blue-400 font-medium mb-2 text-sm">Date</p>
+                        <h3 class="text-2xl font-medium mb-3">Event Title</h3>
+                        <p class="text-slate-400 font-light">Event Description</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section --><section id="team" class="py-24 md:py-40 bg-black/20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight">Our <span class="gradient-text">Team</span></h2>
+                    <p class="text-lg text-slate-400 mt-4 font-light">Meet the dedicated students leading our organization.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <!-- Team Member 1 --><div class="glass-card rounded-xl p-6 text-center">
+                        <img src="https://placehold.co/400x400/1e293b/a5b4fc?text=Member" alt="Anusha Batikeri" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-slate-700 object-cover">
+                        <h3 class="text-xl font-medium">Anusha Batikeri</h3>
+                        <p class="text-blue-400 font-light">President</p>
+                    </div>
+                    <!-- Team Member 2 --><div class="glass-card rounded-xl p-6 text-center">
+                        <img src="https://placehold.co/400x400/1e293b/a5b4fc?text=Member" alt="Emma Thompson" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-slate-700 object-cover">
+                        <h3 class="text-xl font-medium">Emma Thompson</h3>
+                        <p class="text-blue-400 font-light">Treasurer</p>
+                    </div>
+                    <!-- Team Member 3 --><div class="glass-card rounded-xl p-6 text-center">
+                        <img src="https://placehold.co/400x400/1e293b/a5b4fc?text=Member" alt="Jona Truo" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-slate-700 object-cover">
+                        <h3 class="text-xl font-medium">Jona Truo</h3>
+                        <p class="text-blue-400 font-light">Vice President</p>
+                    </div>
+                    <!-- Team Member 4 --><div class="glass-card rounded-xl p-6 text-center">
+                        <img src="https://placehold.co/400x400/1e293b/a5b4fc?text=Member" alt="Juliana Martinez" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-slate-700 object-cover">
+                        <h3 class="text-xl font-medium">Juliana Martinez</h3>
+                        <p class="text-blue-400 font-light">Secretary</p>
+                    </div>
+                    <!-- Team Member 5 --><div class="glass-card rounded-xl p-6 text-center">
+                        <img src="https://placehold.co/400x400/1e293b/a5b4fc?text=Member" alt="Christopher Lee" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-slate-700 object-cover">
+                        <h3 class="text-xl font-medium">Christopher Lee</h3>
+                        <p class="text-blue-400 font-light">Webmaster</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section --><section id="contact" class="py-24 md:py-40 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-light tracking-tight">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="text-lg text-slate-400 mt-4 font-light">Connect with us through our community channels.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Discord --><a href="#" class="block glass-card rounded-xl p-8 text-center group">
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/discord-logo-white-png.png" alt="Discord Logo" class="w-10 h-10 object-contain mx-auto mb-4 transition-transform group-hover:scale-110">
+                        <h3 class="text-xl font-medium text-white mb-1">Discord</h3>
+                        <p class="text-slate-400 font-light">Join our community server.</p>
+                    </a>
+                    <!-- Email --><a href="mailto:tcmgsociety@gmail.com" class="block glass-card rounded-xl p-8 text-center group">
+                        <img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="Email Icon" class="w-10 h-10 object-contain mx-auto mb-4 transition-transform group-hover:scale-110 filter invert">
+                        <h3 class="text-xl font-medium text-white mb-1">Email</h3>
+                        <p class="text-slate-400 font-light">Reach out for inquiries.</p>
+                    </a>
+                    <!-- Instagram --><a href="https://www.instagram.com/tcmgsocietytamu?igsh=MXdqam9ta2h2cHJnaQ==" class="block glass-card rounded-xl p-8 text-center group">
+                        <img src="https://i.stack.imgur.com/8M7E3.png" alt="Instagram Logo" class="w-10 h-10 object-contain mx-auto mb-4 transition-transform group-hover:scale-110">
+                        <h3 class="text-xl font-medium text-white mb-1">Instagram</h3>
+                        <p class="text-slate-400 font-light">Follow us for updates.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer --><footer class="py-12">
+        <div class="container mx-auto px-6 text-center text-slate-500 font-light">
+            <p>&copy; 2025 Technology Management Society. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile menu toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Navbar style on scroll ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                 navbar.classList.add('py-2');
+            } else {
+                 navbar.classList.remove('py-2');
+            }
+        });
+
+        // --- Active nav link highlighting on scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // --- Fade in sections on scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            rootMargin: '0px 0px -100px 0px' // trigger when 100px of the element is visible
+        });
+
+        const sectionsToAnimate = document.querySelectorAll('.fade-in-section');
+        sectionsToAnimate.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
+
