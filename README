@@ -1,4 +1,17 @@
-Project Name:
-TCMG Society Website
+Technology Management Society Website
 
-Description:
+
+A modern, responsive website for the Technology Management Society (TMS) at Texas A&M University.
+The site showcases the organization’s mission, events, leadership team, and ways for students to get involved.
+
+
+root/
+│
+├── index.html
+├── /assets
+│     ├── TCMG_logo-removebg-preview.png
+│     ├── group-me.png
+│     ├── instagram-icon-png-white-81.png
+│     ├── *team headshots*
+│
+└── README.md
