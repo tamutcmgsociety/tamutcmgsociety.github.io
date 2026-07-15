@@ -75,6 +75,7 @@ background: linear-gradient(135deg, #60a5fa, #a78bfa);
 <a href="#home" class="nav-link text-slate-300 hover:text-white active">Home</a>
 <a href="#events" class="nav-link text-slate-300 hover:text-white">Events</a>
 <a href="#team" class="nav-link text-slate-300 hover:text-white">Our Team</a>
+<a href="#alumni" class="nav-link text-slate-300 hover:text-white">Alumni</a>
 <a href="#contact" class="nav-link text-slate-300 hover:text-white">Contact Us</a>
 </nav>
 <div class="md:hidden">
@@ -88,6 +89,7 @@ background: linear-gradient(135deg, #60a5fa, #a78bfa);
 <a href="#home" class="block nav-link text-slate-300 hover:text-white active px-4 py-2">Home</a>
 <a href="#events" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Events</a>
 <a href="#team" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Our Team</a>
+<a href="#alumni" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Alumni</a>
 <a href="#contact" class="block nav-link text-slate-300 hover:text-white px-4 py-2">Contact Us</a>
 </div>
 </header>
@@ -163,14 +165,28 @@ Explore Our Events
 </div>
 </div>
 </section>
+<section id="alumni" class="py-24 md:py-40 bg-black/20 fade-in-section">
+<div class="container mx-auto px-6">
+<div class="max-w-3xl mx-auto glass-card rounded-2xl p-10 md:p-14 text-center">
+<h2 class="text-4xl md:text-5xl font-light tracking-tight mb-8">TCMG/ITSM <span class="gradient-text">Alumni Network</span></h2>
+<p class="text-slate-300 font-light leading-relaxed mb-4 text-left">Howdy TCMG/ITSM Alumnus,</p>
+<p class="text-slate-400 font-light leading-relaxed mb-4 text-left">As current TCMG/ITSM students and faculty, we are excited to reconnect with our alumni. The goal of this network is to strengthen connections between Technology Management–Information Technology Service Management graduates and the current student organization. The information collected will be used to build a professional network through which alumni can stay informed about developments in the program, student organization activities, and other ongoing initiatives.</p>
+<p class="text-slate-400 font-light leading-relaxed mb-8 text-left">Please complete the form to the best of your ability. We look forward to reconnecting with you! If you know other graduates who may be interested, please feel free to share this survey with them.</p>
+<a href="https://tamu.qualtrics.com/jfe/form/SV_1FfDo6wnQTzvRRk" target="_blank" rel="noopener noreferrer" class="inline-block bg-white/10 text-white font-medium px-8 py-3 rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300">
+Complete the Alumni Survey
+</a>
+</div>
+</div>
+</section>
+
 <section id="contact" class="py-24 md:py-40 fade-in-section">
 <div class="container mx-auto px-6">
 <div class="text-center mb-16">
 <h2 class="text-4xl md:text-5xl font-light tracking-tight">Get In <span class="gradient-text">Touch</span></h2>
 <p class="text-lg text-slate-400 mt-4 font-light">Connect with us through our community channels.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-<a href="#" class="block glass-card rounded-xl p-8 text-center group">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+<a href="https://groupme.com/join_group/111072199/GnZwMMF2" target="_blank" rel="noopener noreferrer" class="block glass-card rounded-xl p-8 text-center group">
 <img src="group-me.png" alt="GroupMe Logo" class="w-12 h-12 object-contain mx-auto mb-4 transition-transform group-hover:scale-110">
 <h3 class="text-xl font-medium text-white mb-1">GroupMe</h3>
 <p class="text-slate-400 font-light">Join our community GroupMe!</p>
@@ -180,10 +196,15 @@ Explore Our Events
 <h3 class="text-xl font-medium text-white mb-1">Email</h3>
 <p class="text-slate-400 font-light">Reach out for inquiries.</p>
 </a>
-<a href="https://www.instagram.com/tcmgsocietytamu?igsh=MXdqam9ta2h2cHJnaQ==" class="block glass-card rounded-xl p-8 text-center group">
+<a href="https://www.instagram.com/tcmgsocietytamu?igsh=MXdqam9ta2h2cHJnaQ==" target="_blank" rel="noopener noreferrer" class="block glass-card rounded-xl p-8 text-center group">
 <img src="instagram-icon-png-white-81.png" alt="Instagram Logo" class="w-16 h-16 object-contain mx-auto mb-4 transition-transform group-hover:scale-110">
 <h3 class="text-xl font-medium text-white mb-1">Instagram</h3>
 <p class="text-slate-400 font-light">Follow us for updates.</p>
+</a>
+<a href="https://www.linkedin.com/groups/13926280/" target="_blank" rel="noopener noreferrer" class="block glass-card rounded-xl p-8 text-center group">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" class="w-12 h-12 object-contain mx-auto mb-4 transition-transform group-hover:scale-110">
+<h3 class="text-xl font-medium text-white mb-1">Alumni Network</h3>
+<p class="text-slate-400 font-light">Connect with alumni on LinkedIn.</p>
 </a>
 </div>
 </div>
@@ -195,14 +216,13 @@ Explore Our Events
 </div>
 </footer>
 <script>
-    
 // --- Mobile menu toggle ---
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 mobileMenuButton.addEventListener('click', () => {
 mobileMenu.classList.toggle('hidden');
 });
- 
+
 // --- Navbar style on scroll ---
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -212,7 +232,7 @@ navbar.classList.add('py-2');
 navbar.classList.remove('py-2');
 }
 });
- 
+
 // --- Active nav link highlighting on scroll ---
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -231,7 +251,7 @@ link.classList.add('active');
 }
 });
 });
- 
+
 // --- Fade in sections on scroll ---
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
@@ -249,6 +269,4 @@ observer.observe(section);
 </script>
 </body>
 </html>
- 
-
 
